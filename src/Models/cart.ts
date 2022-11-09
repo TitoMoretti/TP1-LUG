@@ -3,9 +3,9 @@ import { Schema, model } from "mongoose";
 // declaro la estructura que va a tener mi esquema/documento/tabla.
 const CartSchema = new Schema({
   name: {type: String, required: true},
-  amount: {type: Number, required: true},
-  price: {type: Number, required: true},
-  //  details: {type: Array, required: true},
+  //amount: {type: Number, required: true},
+  //price: {type: Number, required: true},
+  details: {type: Array, required: true},
   totalPrice: {type: Number, required: true},
 });
 

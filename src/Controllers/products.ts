@@ -27,7 +27,7 @@ const productController = {
                 //Guarda la nueva información
                 await newProduct.save()
                 //Le avisa al usuario que se ha podido agregar con éxito
-                res.send("El producto '"+newProduct.name+"' se ha agregado correctamente. Sus datos son:\n\n"+newProduct)
+                res.send("El producto '"+newProduct.name+"' se ha agregado correctamente. Sus datos son:\n\nNombre: "+newProduct.name+"\nStock: "+newProduct.stock+"\nPrecio c/u: "+newProduct.price)
             } else {
                 //En el caso de que sí esté en la base de datos, le avisa
                 res.send("Lo siento, pero este producto ya aparece en la Base de Datos. Por favor inserte otro.")
@@ -71,7 +71,7 @@ const productController = {
                 //Guardas los nuevos datos
                 isInProduct.save()
                 //Le avisa que se ha podido modificar
-                res.send("El producto '" + isInProduct.name + "' se ha podido actualizar correctamente. Sus datos ahora son:\n\n" +isInProduct)
+                res.send("El producto '" + isInProduct.name + "' se ha podido actualizar correctamente. Sus datos ahora son:\n\nNombre: "+isInProduct.name+"\nStock: "+isInProduct.stock+"\nPrecio c/u: "+isInProduct.price)
             } else {
                 //En el caso de que no esté, le avisa
                 res.send("Lo siento, pero este producto no se ha encontrados en la Base de Datos.\nPor favor, verifique que haya insertado el producto correcto o pruebe a agregar el mismo.")
